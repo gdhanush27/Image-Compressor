@@ -14,9 +14,9 @@ The script processes images in a user-specified input folder and saves the resiz
 - **Automatic Folder Creation**: Creates the output folder if it does not exist.
 
 ## Screenshots
-<center>
+<p align="center">
 <img src="assets\Screenshot.jpg" width="75%" />
-</center>
+</p>
 
 ## Prerequisites
 
