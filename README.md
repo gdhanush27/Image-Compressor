@@ -15,7 +15,7 @@ The script processes images in a user-specified input folder and saves the resiz
 
 ## Screenshots
 
-![Image Resizer and Compressor](assets\Screenshot.jpg)
+<img src="assets\Screenshot.jpg" width="100%"/>
 
 ## Prerequisites
 
