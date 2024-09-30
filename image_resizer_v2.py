@@ -1,3 +1,6 @@
+# This is the updated version of the script that uses a GUI to select input and output folders, and set parameters for resizing and compressing images. 
+# The script uses Tkinter for the GUI and PIL (Pillow) for image processing.
+
 import warnings
 warnings.simplefilter("ignore", DeprecationWarning)
 
@@ -119,7 +122,7 @@ tk.Entry(root, textvariable=width_var, width=10).grid(row=2, column=1, sticky='w
 
 tk.Label(root, text="Height:").grid(row=2, column=1, padx=10, pady=10)
 height_var = tk.StringVar(value="132")
-tk.Entry(root, textvariable=height_var, width=10).grid(row=2, column=1)
+tk.Entry(root, textvariable=height_var, width=10).grid(row=2, column=1, sticky='e')
 
 # DPI setting
 tk.Label(root, text="DPI:").grid(row=3, column=0, padx=10, pady=10)
@@ -133,7 +136,7 @@ tk.Entry(root, textvariable=min_size_var, width=10).grid(row=4, column=1, sticky
 
 tk.Label(root, text="Max Size (KB):").grid(row=4, column=1, padx=10, pady=10)
 max_size_var = tk.StringVar(value="30")
-tk.Entry(root, textvariable=max_size_var, width=10).grid(row=4, column=1)
+tk.Entry(root, textvariable=max_size_var, width=10).grid(row=4, column=1, sticky='e')
 
 # Process images button
 tk.Button(root, text="Process Images", command=process_images).grid(row=5, column=0, columnspan=3, pady=20)

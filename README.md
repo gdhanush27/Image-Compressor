@@ -13,6 +13,8 @@ The script processes images in a user-specified input folder and saves the resiz
 - **Supported Formats**: Works with `.jpg`, `.jpeg`, and `.png` image formats.
 - **Automatic Folder Creation**: Creates the output folder if it does not exist.
 
+## Screenshots
+![Image Resizer and Compressor](./assets/screenshot.PNG)
 ## Prerequisites
 
 - **Python 3.x**: The script runs on Python 3.x. Ensure that Python is installed on your system.
@@ -25,6 +27,17 @@ The script processes images in a user-specified input folder and saves the resiz
 
 ```bash
 pip install Pillow
+```
+
+## How to Use
+
+1. Clone or download this repository to your local machine.
+2. Place the images you want to resize and compress into a folder.
+3. Run the script and provide the input folder path when prompted.
+
+### Example Usage
+```bash
+python image_resizer_v2.py
 ```
 
 ## How It Works
@@ -44,6 +57,8 @@ pip install Pillow
    - Images are saved in the output folder with the new dimensions and file size.
    - If an image exceeds the target file size, it will be flagged for further compression.
 
+
+
 ## Error Handling
 - The script will check for the existence of the input and output folders.
 - Errors encountered during the image processing will be printed in the console, and the script will exit safely.
@@ -51,5 +66,7 @@ pip install Pillow
 ## Dependencies
 - **Pillow**: Image processing library.
 
+## Previous Versions
+- [Version 1.0](./Older%20Versions/V1.0/README.md)  
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
