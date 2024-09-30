@@ -15,7 +15,8 @@ The script processes images in a user-specified input folder and saves the resiz
 
 ## Screenshots
 
-![Image Resizer and Compressor](./assets/screenshot.PNG)
+![Image Resizer and Compressor](assets\Screenshot.jpg)
+
 ## Prerequisites
 
 - **Python 3.x**: The script runs on Python 3.x. Ensure that Python is installed on your system.
