@@ -1,62 +1,55 @@
-# Image Resizer and Compressor
+# Image Resizer and Compressor (v2)
 
-This Python script resizes and compresses images to a target size range (in KB) while adding extra metadata to the image file. The script supports formats such as JPEG and PNG and allows you to adjust parameters like image size, DPI, and target size.
+## Description
+`image_resizer_v2.py` is a Python script with a graphical user interface (GUI) built using Tkinter. The script allows you to resize and compress images to fit within a specified file size range (in KB). Additionally, the script appends extra metadata to the image file, making it suitable for managing image sizes for specific applications.
+
+The script processes images in a user-specified input folder and saves the resized and compressed images to an output folder. The user can adjust the image dimensions, DPI (dots per inch), and target file size through the GUI.
 
 ## Features
-- Resize images to a specified width and height.
-- Set the resolution (DPI) of the images.
-- Compress images to a target size range (minimum and maximum in KB).
-- Add extra metadata to the image files to increase their size, if needed.
-- Automatically installs the `Pillow` library if it's not found.
+- **Graphical User Interface (GUI)**: Simple Tkinter-based GUI for easy user interaction.
+- **Image Resizing**: Resizes images to user-specified dimensions (width x height in pixels).
+- **Image Compression**: Compresses images to fit within a specified size range (in KB).
+- **Extra Metadata**: Adds extra metadata to the images to reach the target file size range.
+- **Supported Formats**: Works with `.jpg`, `.jpeg`, and `.png` image formats.
+- **Automatic Folder Creation**: Creates the output folder if it does not exist.
 
-## Requirements
+## Prerequisites
 
-- Python 3.x
-- Pillow (automatically installed if missing)
+- **Python 3.x**: The script runs on Python 3.x. Ensure that Python is installed on your system.
+- **Pillow**: The script uses the Pillow library to manipulate images. Pillow is automatically installed if it is not already available.
 
-## How to Use
+## Installation
 
-1. Clone or download this repository to your local machine.
-2. Place the images you want to resize and compress into a folder.
-3. Run the script and provide the input folder path when prompted.
+1. Clone or download the script to your local machine.
+2. Ensure that the necessary Python libraries are installed. The script will automatically install Pillow if it is missing.
 
-### Example Usage
 ```bash
-python image_resizer.py
+pip install Pillow
 ```
 
-The script will:
-- Prompt you to enter the path to the folder containing images.
-- Resize all JPEG, JPG, and PNG images in the specified folder to a size of 132x132 pixels by default.
-- Set the image resolution to 200 DPI.
-- Compress the images so that they fall within the target size range (20KB to 30KB).
-- Add 10KB of extra metadata to each image file.
-- Output the compressed images in a folder named `<input_folder>_compressed`.
+## How It Works
 
-### Modifying Parameters
+1. **Select Folders**: Users can select the input and output folders using a file dialog.
+   - The **Input Folder** contains the images you want to resize and compress.
+   - The **Output Folder** is where the processed images will be saved.
+   
+2. **Adjust Parameters**: 
+   - **Image Dimensions**: Set the target width and height for resizing (default: 132x132 pixels).
+   - **DPI**: Set the image resolution (default: 200 DPI).
+   - **File Size**: Set the target minimum and maximum file size (in KB).
+   - **Extra Metadata**: Adds 10KB of extra metadata to each image file to reach the desired size range.
 
-Before processing, the script will display the default parameters and ask for confirmation. If you want to change any parameters, you can enter new values; otherwise, pressing Enter will retain the current values.
-
-- **Size**: Default 132x132 pixels (can be modified)
-- **Resolution (DPI)**: Default 200 DPI (can be modified)
-- **Target Minimum Size**: Default 20KB (can be modified)
-- **Target Maximum Size**: Default 30KB (can be modified)
-- **Extra Metadata**: Default 10KB
-
-
-## Output
-
-The processed images are saved in a new folder called `<input_folder>_compressed`. The script ensures that the compressed images remain within the specified size range. If an image exceeds the maximum size, it is flagged for further compression.
-
-## Dependencies
-
-This script requires the `Pillow` library for image processing. If Pillow is not installed, the script will automatically install it using `pip`.
+3. **Processing**:
+   - The script will resize and compress each image in the input folder.
+   - Images are saved in the output folder with the new dimensions and file size.
+   - If an image exceeds the target file size, it will be flagged for further compression.
 
 ## Error Handling
+- The script will check for the existence of the input and output folders.
+- Errors encountered during the image processing will be printed in the console, and the script will exit safely.
 
-- The script will alert you if the input folder does not exist or if an image fails to process.
-- All errors will be printed to the console, and the script will safely exit.
+## Dependencies
+- **Pillow**: Image processing library.
 
 ## License
-
-This project is licensed under the [MIT License](LICENSE). 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
