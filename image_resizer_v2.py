@@ -48,13 +48,7 @@ def resize_and_compress_image(image_path, output_folder, size, dpi, extra_data_s
     # Start with high quality (100) and save image
     img.save(final_image_path, dpi=dpi, quality=quality)
     img_size = get_size(final_image_path)
-    n = 0
-    if img_size == 0:
-        n = 2.5
-    elif img_size < 10:
-        n = 2
-    elif img_size < 20:
-        n = 1
+    n = int(target_max_size-target_min_size) // 10  # Number of iterations for compression
 
     # Write extra metadata
     with open(final_image_path, 'ab') as f:  # Open file in append and binary mode
