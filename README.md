@@ -14,6 +14,7 @@ The script processes images in a user-specified input folder and saves the resiz
 - **Automatic Folder Creation**: Creates the output folder if it does not exist.
 
 ## Screenshots
+
 ![Image Resizer and Compressor](./assets/screenshot.PNG)
 ## Prerequisites
 
