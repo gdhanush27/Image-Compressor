@@ -39,10 +39,14 @@ pip install Pillow
 3. Run the script and provide the input folder path when prompted.
 
 ### Example Usage
-```bash
-python image_resizer_v2.py
-```
-
+- Linux/Mac:
+> ```bash
+> python image_resizer_v2.py
+> ```
+- Windows:
+> ```cmd
+> start ImageResizer.exe
+> ```
 ## How It Works
 
 1. **Select Folders**: Users can select the input and output folders using a file dialog.
